@@ -1,7 +1,8 @@
 #include "holberton.h"
 #include <ctype.h>
 /**
- *main - main block
+ *_islower - check for lowercase alphabet
+ *@c: the character to print
  *Return: 0
  */
 int _islower(int c)
