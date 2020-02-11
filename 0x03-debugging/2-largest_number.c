@@ -24,6 +24,7 @@ else
 {
 largest = c;
 }
+putchar('\n');
 return (largest);
 }
 
