@@ -10,7 +10,7 @@ int last_num = 0;
 
 if (n < 0)
 {
-n *= -1;
+n = -n;
 last_num = n % 10;
 _putchar(last_num + '0');
 return (last_num);
