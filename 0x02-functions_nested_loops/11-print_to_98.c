@@ -1,22 +1,40 @@
 #include "holberton.h"
 #include <stdio.h>
-
 /**
- *void print_to_98 - display numbers
- *@n: print digit
- * Return: no return
+ *print_to_98 - print all natural numbers
+ *@n: varibale
+ *Return: no return
  */
 
 void print_to_98(int n)
 {
-if (n <= 98)
+if (n < 98)
 {
-for (n = n; n <= 97; n++)
-printf("%d, ", n);
+while (n <= 98)
+{
+printf("%d", n);
+if (n != 98)
+{
+printf(", ");
+}
+n++;
+}
+}
+else if (n > 98)
+{
+while (n >= 98)
+{
+printf("%d", n);
+if (n != 98)
+{
+printf(", ");
+}
+n--;
+}
 }
 else
-for (n = n; n > 98; n--)
-printf("%d, ", n);
-printf("98 \n");
+{
+printf("98");
 }
-
+printf("\n");
+}
