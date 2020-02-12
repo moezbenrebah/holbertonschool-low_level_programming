@@ -10,13 +10,15 @@ int main(void)
   printf("%lld, ", a);
   printf("%lld, ", b);
 
-  for (i = 2; i <= 50; i++)
+  for (i = 3; i <= 50; i++)
     {
       x = a + b;
       a = b;
       b = x;
-      if (i < 50)
+      if (i != 50)
 	printf("%lli, ", x);
+      else
+	printf("%lli", x);
     }
   printf("\n");
     }
