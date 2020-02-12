@@ -6,13 +6,13 @@
  */
 int main(void)
 {
-long long int a, b, x;
+long int a, b, x;
 int i;
 a = 1;
 b = 2;
 
-printf("%lld, ", a);
-printf("%lld, ", b);
+printf("%ld, ", a);
+printf("%ld, ", b);
 
 for (i = 3; i <= 50; i++)
 {
@@ -20,9 +20,9 @@ x = a + b;
 a = b;
 b = x;
 if (i != 50)
-printf("%lli, ", x);
+printf("%li, ", x);
 else
-printf("%lli", x);
+printf("%li", x);
 }
 printf("\n");
 return (0);
