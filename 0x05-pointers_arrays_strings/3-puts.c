@@ -9,5 +9,11 @@
 
 void _puts(char *str)
 {
-printf("%sn\n", str);
+
+while (*(str + 1))
+{
+putchar(str[0]);
+str++;
+}
+putchar('\n');
 }
