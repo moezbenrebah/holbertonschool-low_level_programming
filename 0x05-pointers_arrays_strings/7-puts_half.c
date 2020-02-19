@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  *puts_half - print half string
@@ -18,7 +19,7 @@ i++;
 }
 for (j = 0; str[j] != '\0'; j++)
 {
-if (j >= i / 2)
+if (j > i / 2)
 _putchar(str[j]);
 }
 _putchar('\n');
