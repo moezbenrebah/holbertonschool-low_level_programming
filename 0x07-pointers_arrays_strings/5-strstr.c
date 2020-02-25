@@ -1,6 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
-#include <stdio.h>
+
 /**
  *_strstr - find the first occurence
  *@haystack: string
@@ -18,8 +18,8 @@ char *_strstr(char *haystack, char *needle)
 
 	for (s = 0; needle[s]; s++)
 	;
-	if (s == 0 || !needle)
-	return (NULL);
+	if (s == 0)
+	return (haystack);
 	while (haystack[i])
 	{
 		if (haystack[i] == needle[j])
