@@ -15,7 +15,7 @@ do {
 if (*s == c)
 return ((char *)s);
 }
-while (s++)
+while (*s++)
 ;
 
 return (0);
