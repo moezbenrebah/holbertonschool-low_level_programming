@@ -8,7 +8,7 @@
  *
  *Return: the pointer to the first occurence
  */
-
+#include <stdio.h>
 char *_strstr(char *haystack, char *needle)
 {
 
@@ -28,14 +28,15 @@ char *_strstr(char *haystack, char *needle)
 			j++;
 			for (k = i; haystack[k]; k++)
 			{
-				if (haystack[k] != needle[j])
-					return (NULL);
-				j++;
 				if (needle[j] == '\0')
 					return (&(haystack[i - 1]));
+				if (haystack[k] != needle[j])
+					break;
+				j++;
 			}
 		}
 		i++;
+		j = 0;
 	}
 	return (NULL);
 }
