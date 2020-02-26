@@ -1,0 +1,16 @@
+#include "holberton.h"
+
+int square(int i, int n)
+{
+  if (i * i == n)
+    return (i);
+  else if (i < n)
+    return (square(i + 1, n));
+  else
+    return (-1);
+}
+
+int _sqrt_recursion(int n)
+{
+  return (square(1, n));
+}

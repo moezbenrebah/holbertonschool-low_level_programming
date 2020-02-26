@@ -13,10 +13,10 @@ int square(int i, int n)
 {
 if (i * i == n)
 return (i);
-else if (i < n)
-return (square(i + 1, n));
-else
+else if (i > n / 2)
 return (-1);
+else
+return (square(i + 1, n));
 }
 
 int _sqrt_recursion(int n)
