@@ -1,6 +1,5 @@
 #include "holberton.h"
 #include <stdlib.h>
-#include <string.h>
 
 /**
  *_strdup - duplicate a string
@@ -23,7 +22,7 @@ for (i = 0; i <= *str; i++)
 ;
 }
 i++;
-str1 = malloc(strlen(str) + 1);
+ str1 = malloc(sizeof(char) * i);
 for (j = 0; j < i; j++)
 str1[j] = str[j];
 if (str1 == NULL)
