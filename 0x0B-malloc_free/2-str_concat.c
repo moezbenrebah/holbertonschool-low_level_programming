@@ -16,11 +16,13 @@ int i, j, a = 0;
 char *c;
 
 if (s1 == 0 || s2 == 0)
-i = j = 0;
+c = "";
 
+i = 0;
 while (s1[i] != '\0')
 i++;
 
+j = 0;
 while (s2[j] != '\0')
 j++;
 
