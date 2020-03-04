@@ -12,18 +12,19 @@
 
 char *str_concat(char *s1, char *s2)
 {
-int i, j, h, a = 0;
+int i, j, a = 0;
 char *c;
-
-i = strlen(s1);
-j = strlen(s2);
-h = i + j + 1;
 
 if (s1 == NULL || s2 == NULL)
 {
 c = "";
 }
-c = malloc(sizeof(char) * h);
+
+for (i = 0; s1[i] != '\0';  i++);
+
+for (j = 0; s2[j] != '\0'; j++);
+{
+c = malloc((sizeof(char) * i) + (sizeof(char) * j) + 1);
 
 if (c == NULL)
 {
@@ -43,6 +44,6 @@ s2++;
 a++;
 }
 c[a] = '\0';
-
+}
 return (c);
 }
