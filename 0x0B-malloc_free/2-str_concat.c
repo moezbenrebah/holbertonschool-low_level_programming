@@ -18,8 +18,17 @@ char *c;
 i = strlen(s1);
 j = strlen(s2);
 h = i + j + 1;
+
+if (s1 == NULL || s2 == NULL)
+{
+c = "";
+}
 c = malloc(sizeof(char) * h);
 
+if (c == NULL)
+{
+return (NULL);
+}
 while (*s1 != '\0')
 {
 c[a] = *s1;
