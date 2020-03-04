@@ -16,7 +16,7 @@ int i, j, a = 0;
 char *c;
 
 if (s1 == 0 || s2 == 0)
-c = "";
+  return (NULL);
 
 i = 0;
 while (s1[i] != '\0')
