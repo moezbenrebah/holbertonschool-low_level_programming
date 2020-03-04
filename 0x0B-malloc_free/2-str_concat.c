@@ -16,13 +16,13 @@ int i, j, a = 0;
 char *c;
 
 if (s1 == 0 || s2 == 0)
-c = NULL;
+c = "";
 
 for (i = 0; i < s1[i]; i++)
 ;
 for (j = 0; j < s2[j]; j++)
 ;
-c = malloc((sizeof(char) * i)+(sizeof(char) * j)+1);
+c = malloc((sizeof(char) * i) + (sizeof(char) * j) + 1);
 
 if (c == NULL)
 {
