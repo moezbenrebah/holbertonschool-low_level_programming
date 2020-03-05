@@ -16,10 +16,10 @@ char *c;
 
 if (nmemb == 0 || size == 0)
 return (NULL);
-c = malloc (nmemb * size);
+c = malloc(nmemb * size);
 if (c == 0)
 return (NULL);
-for (i = 0; i <= nmemb * size; i++)
+for (i = 0; i < nmemb * size; i++)
 c[i] = 0;
 
 return (c);
