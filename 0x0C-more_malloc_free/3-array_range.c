@@ -23,7 +23,7 @@ if (i == 0)
 return (NULL);
 
 y = min;
-for (x = y; x <= j; x++)
+for (x = 0; x < j; x++)
 {
 i[x] = y;
 y++;
