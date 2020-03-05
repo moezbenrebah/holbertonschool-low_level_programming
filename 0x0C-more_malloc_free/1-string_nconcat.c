@@ -25,9 +25,8 @@ for (i = 0; s1[i]; i++)
 for (j = 0; s2[j]; j++)
 ;
 
-if (j > n)
-j = n;
-
+ if (j > n)
+   j = n;
 c = malloc ((sizeof(char) * i) + (sizeof(char) * j) +1);
 
 if (c == NULL)
@@ -41,14 +40,13 @@ c[a] = *s1;
 s1++;
 a++;
 }
-c[a] = s1[a];
-while (*s2 != '\0')
+
+while (a < j + i)
 {
 c[a] = *s2;
 s2++;
 a++;
 }
-c[a + i] = s2[a];
 c[i + j] = '\0';
 
 return (c);
