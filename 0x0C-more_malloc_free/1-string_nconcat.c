@@ -25,8 +25,9 @@ for (i = 0; s1[i]; i++)
 for (j = 0; s2[j]; j++)
 ;
 
- if (j > n)
-   j = n;
+if (j > n)
+j = n;
+
 c = malloc ((sizeof(char) * i) + (sizeof(char) * j) +1);
 
 if (c == NULL)
