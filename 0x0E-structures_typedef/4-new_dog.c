@@ -64,29 +64,28 @@ int lenname = _strlen(name);
 int lenowner = _strlen(owner);
 
 dog_t *new_dog;
-char *new_name;
-char *new_owner;
 
 new_dog = malloc(sizeof(dog_t));
 if (new_dog == NULL)
 return (NULL);
 
-new_name = _strdup(name);
-if (new_name == NULL)
+new_dog->name = malloc(sizeof(char) * lenname);
+new_dog->owner = malloc(sizeof(char) * lenowner);
+
+new_dog->name = _strdup(name);
+if (name == NULL)
 {
 free(new_dog);
 return (NULL);
 }
 
-new_owner = _strdup(owner);
-if (new_owner == NULL)
+new_dog->owner = _strdup(owner);
+if (owner == NULL)
 {
-free(new_name);
+free(name);
 free(new_dog);
 return (NULL);
 }
-new_dog->name = malloc(sizeof(char) * lenname);
-new_dog->owner = malloc(sizeof(char) * lenowner);
 
 new_dog->name = name;
 
