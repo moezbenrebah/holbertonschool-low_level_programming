@@ -62,7 +62,7 @@ new_dog->age = age;
 new_dog->owner = _strdup(owner);
 if (owner == NULL)
 {
-free(new_dog->name);
+free(name);
 free(new_dog);
 return (NULL);
 }
