@@ -32,22 +32,6 @@ str1[j] = str[j];
 
 return (str1);
 }
-/**
- *_strlen - compute the length
- *@s: array of character
- *
- *Return: integer
- */
-
-int _strlen(char *s)
-{
-int i = 0;
-
-while (s[i])
-i++;
-
-return (i);
-}
 
 /**
  *new_dog - structure
@@ -60,17 +44,11 @@ return (i);
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-int lenname = _strlen(name);
-int lenowner = _strlen(owner);
-
 dog_t *new_dog;
-
 new_dog = malloc(sizeof(dog_t));
+
 if (new_dog == NULL)
 return (NULL);
-
-new_dog->name = malloc(sizeof(char) * lenname);
-new_dog->owner = malloc(sizeof(char) * lenowner);
 
 new_dog->name = _strdup(name);
 if (name == NULL)
@@ -82,16 +60,10 @@ return (NULL);
 new_dog->owner = _strdup(owner);
 if (owner == NULL)
 {
-free(name);
+free(new_dog->name);
 free(new_dog);
 return (NULL);
 }
-
-new_dog->name = name;
-
 new_dog->age = age;
-
-new_dog->owner = owner;
-
 return (new_dog);
 }
