@@ -39,27 +39,22 @@ return (NULL);
 
 new_dog->name = malloc(sizeof(char) * lenname);
 if (name == NULL)
-return (NULL);
-
-new_dog->owner = malloc(sizeof(char) * lenowner);
-if (owner == NULL)
-return (NULL);
-
-new_dog->name = name;
-if (name == NULL)
 {
-free(name);
 free(new_dog);
+return (NULL);
 }
+new_dog->name = name;
 
 new_dog->age = age;
 
-new_dog->owner = owner;
+new_dog->owner = malloc(sizeof(char) * lenowner);
 if (owner == NULL)
 {
-free(owner);
+free(name);
 free(new_dog);
+return (NULL);
 }
-
+new_dog->owner = owner;
+ 
 return (new_dog);
 }
