@@ -1,9 +1,9 @@
 #include "3-calc.h"
 
 /**
- *op_add - adds a and b
- *@a: number 1
- *@b: number 2
+ *op_add - add two numbers a and b
+ *@a: integer
+ *@b: integer
  *
  *Return: sum of a and b
  */
@@ -17,7 +17,7 @@ return (a + b);
  *@a: number 1
  *@b: number 2
  *
- *Return difference between a and b
+ *Return: difference between a and b
  */
 
 int op_sub(int a, int b)
