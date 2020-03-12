@@ -24,11 +24,6 @@ exit(98);
 n1 = atoi(argv[1]);
 n2 = atoi(argv[3]);
 
-/* if ((*argv[2] == '/' || *argv[2] == '%') && *argv[3] == '0')
-{
-printf("Error\n");
-exit(99);
-}*/
 ptr = get_op_func(argv[2]);
 n3 = ptr(n1, n2);
 
