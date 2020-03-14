@@ -22,7 +22,7 @@ c = va_arg(argc, char*);
 if (c == NULL)
 printf("nil");
 
-else
+if (c != NULL)
 printf("%s", c);
 
 if (i < (n - 1) && separator)
