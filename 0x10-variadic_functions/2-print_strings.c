@@ -20,10 +20,10 @@ va_start(argc, n);
 while (i < n)
 {
 c = va_arg(argc, char*);
+printf("%s", c);
+
 if (c == NULL)
 printf("nil");
-else
-printf("%s", c);
 
 if (i < (n - 1) && separator)
 printf("%s", separator);
