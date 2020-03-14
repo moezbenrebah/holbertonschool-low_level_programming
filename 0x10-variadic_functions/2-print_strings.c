@@ -16,11 +16,6 @@ char *c;
 va_list argc;
 va_start(argc, n);
 
-if (separator == NULL)
-{
-return;
-}
-
 while (i < n)
 {
 c = va_arg(argc, char*);
