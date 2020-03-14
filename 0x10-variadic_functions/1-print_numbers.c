@@ -23,7 +23,7 @@ while (i < n)
 {
 printf("%d", va_arg(argp, int));
 
-if (i != (n - 1))
+if (i != (n - 1) && separator)
 printf("%s", separator);
 i++;
 }
