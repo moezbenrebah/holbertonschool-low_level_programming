@@ -25,9 +25,8 @@ if (c == NULL)
 printf("nil");
 
 if (i < (n - 1) && separator)
-{
 printf("%s", separator);
-}
+
 i++;
 }
 printf("\n");
