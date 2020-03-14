@@ -14,10 +14,6 @@ unsigned int i = 0;
 va_list argp;
 va_start(argp, n);
 
-if (separator == NULL)
-{
-return;
-}
 
 while (i < n)
 {
