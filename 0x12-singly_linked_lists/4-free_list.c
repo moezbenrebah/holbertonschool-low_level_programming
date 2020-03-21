@@ -9,13 +9,14 @@
 
 void free_list(list_t *head)
 {
-list_t *tmp, *store;
+list_t *tmp;
 tmp = head;
 
-while (tmp != NULL)
+while (head != NULL)
 {
-store = tmp->next;
+tmp = head;
+head = tmp->next;
+free(tmp->str);
 free(tmp);
-tmp = store;
 }
 }
