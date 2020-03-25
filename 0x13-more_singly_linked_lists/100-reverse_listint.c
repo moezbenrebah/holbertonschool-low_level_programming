@@ -11,22 +11,22 @@
 
 listint_t *reverse_listint(listint_t **head)
 {
-listint_t *tmp, *next, *prev;
+listint_t *next, *prev;
 
 next = prev = NULL;
-tmp = *head;
+
 
 if (head == NULL || *head == NULL)
 return (NULL);
 
-while (tmp != NULL)
+while (*head != NULL)
 {
-next = tmp->next;
-tmp->next = prev;
-prev = tmp;
-tmp = next;
+next = (*head)->next;
+(*head)->next = prev;
+prev = *head;
+*head = next;
 }
 *head = prev;
 
-return (tmp);
+return (*head);
 }
