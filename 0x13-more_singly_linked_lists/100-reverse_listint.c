@@ -15,16 +15,17 @@ listint_t *next, *prev;
 
 next = prev = NULL;
 
-
 if (head == NULL || *head == NULL)
 return (NULL);
 
 while (*head != NULL)
 {
+
 next = (*head)->next;
 (*head)->next = prev;
 prev = *head;
 *head = next;
+
 }
 *head = prev;
 
