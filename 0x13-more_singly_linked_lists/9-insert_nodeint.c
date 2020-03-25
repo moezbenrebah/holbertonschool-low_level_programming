@@ -18,29 +18,31 @@ unsigned int i;
 if (head == NULL || *head == NULL)
 return (NULL);
 
-tmp = malloc(sizeof(listint_t));
+tmp = *head;
+i = 1;
 
-if (idx)
+while (i < idx && tmp)
 {
-tmp->n = n;
-tmp->next = *head;
-*head = tmp;
+tmp = tmp->next;
+if (tmp == NULL)
+return (NULL);
+i++;
 }
+
 new_node = malloc(sizeof(listint_t));
 new_node->n = n;
 
-if (idx == 1)
-{
-new_node->next = tmp;
-*head = new_node;
+if (new_node == NULL)
 return (NULL);
+
+if (idx == 0)
+{
+new_node->next = *head;
+*head = new_node;
+return (new_node);
 }
 
-for (i = 1; i < idx - 1; i++)
-{
-tmp = tmp->next;
-}
-new_node = tmp->next;
+new_node->next = tmp->next;
 tmp->next = new_node;
 
 return (new_node);
