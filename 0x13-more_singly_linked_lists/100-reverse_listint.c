@@ -16,6 +16,9 @@ listint_t *tmp, *next, *prev;
 next = prev = NULL;
 tmp = *head;
 
+if (head == NULL || *head == NULL)
+return (NULL);
+
 while (tmp != NULL)
 {
 next = tmp->next;
