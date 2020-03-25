@@ -21,8 +21,9 @@ return (-1);
 
 if (index == 0)
 {
-*head = tmp->next;
-free(tmp);
+tmp = (*head)->next;
+free(*head);
+*head = tmp;
 return (1);
 }
 
