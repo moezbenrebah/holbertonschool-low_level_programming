@@ -3,14 +3,14 @@
 
 /**
  *findbits - count number of bits to be flipped
- *@a: unsigned integer
+ *@a: unsigned long integer
  *
  *Return: number of bits
  */
 
-unsigned int findbits(unsigned int a)
+unsigned int findbits(unsigned long int a)
 {
-int i = 0;
+long int i = 0;
 
 
 while (a)
