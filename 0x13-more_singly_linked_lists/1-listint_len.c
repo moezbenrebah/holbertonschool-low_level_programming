@@ -16,7 +16,6 @@ tmp = h;
 
 while (tmp != NULL)
 {
-if (tmp->n)
 tmp = tmp->next;
 i++;
 }
