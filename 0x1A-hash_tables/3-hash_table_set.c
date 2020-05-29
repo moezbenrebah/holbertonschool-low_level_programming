@@ -16,7 +16,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	unsigned int long i;
 
-	if (!ht || !key)
+	if (!ht || !key || !*key || !value)
 		return (0);
 	i = key_index((unsigned char *)key, ht->size);
 
