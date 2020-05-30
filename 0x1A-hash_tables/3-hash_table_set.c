@@ -12,39 +12,38 @@
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *tmp, *new = NULL;
-
 	unsigned int long i;
+	hash_node_t *new = NULL, *tmp;
+
 
 	if (!ht || !key || !*key || !value)
 		return (0);
 	i = key_index((unsigned char *)key, ht->size);
+	tmp = ht->array[i];
 
-	if (ht->array[i])
+	while (tmp != NULL)
 	{
-		tmp = ht->array[i];
-		while (tmp != NULL)
+		if (strcmp(key, tmp->key) == 0)
 		{
-			if (!strcmp(tmp->key, key))
-			{
-				free(tmp->value);
-				tmp->value = strdup(value);
-				return (1);
-			}
-			tmp = tmp->next;
+			free(tmp->value);
+			tmp->value = strdup(value);
+			if (!tmp->value)
+				return (0);
+			return (1);
 		}
-		new = malloc(sizeof(hash_node_t *));
-		if (!new)
-			return (0);
-		new->value = strdup(value);
-		new->key = strdup(key);
-		new->next = NULL;
-		new->next = ht->array[i];
-		ht->array[i] = new;
+		tmp = tmp->next;
 	}
-	else
+	new = malloc(sizeof(hash_node_t));
+	if (!new)
+		return (0);
+	new->key = strdup(key);
+	new->value = strdup(value);
+	if (!new->value)
 	{
-		ht->array[i] = new;
+		free(new);
+		return (0);
 	}
+	new->next = ht->array[i];
+	ht->array[i] = new;
 	return (1);
 }
