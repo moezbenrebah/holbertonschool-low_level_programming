@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-
+"""
+"""
 
 def island_perimeter(grid):
-
+    """
+    """
     per = 0
 
     for i, j in enumerate(grid):
