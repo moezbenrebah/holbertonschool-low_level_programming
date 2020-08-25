@@ -1,6 +1,15 @@
 # 0x1E. C - Search Algorithms
 
 
+## Resources
+
+##### Read or watch:
+
+[GitHub](https://en.wikipedia.org/wiki/Search_algorithm)
+[GitHub](https://www.geeksforgeeks.org/g-fact-86/)
+
+
+
 #### General
 
 - What is a search algorithm
