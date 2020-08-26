@@ -2,7 +2,7 @@
 
 /**
  * jump_search - a function to search for a given value in a given array
- * @arry: a pointer to the first element of the array to search in
+ * @array: a pointer to the first element of the array to search in
  * @size: the number of elements in array
  * @value: the value to search for
  *
@@ -12,32 +12,34 @@
 int jump_search(int *array, size_t size, int value)
 {
 
-	size_t first, last, i;
+	size_t first, last, i, x = 0;
 
 	if (!array)
 		return (-1);
 
-	first = array[0];
+	first = 0;
 	last = sqrt(size);
 
-	while (array[last] <= value && last < size)
+	while (first < size && array[first] < value)
 	{
-		printf("Value checked array [%d] = [%ld]\n", array[first], first);
+		printf("Value checked array [%ld] = [%d]\n", first, array[first]);
+		x = first;
 		first = last;
 		last += sqrt(size);
-		if (last > size - 1)
-			last = size;
 	}
 
-	for (i = first; i < last; i++)
+	first = x;
+	last = x + sqrt(size);
+	printf("Value found between indexes [%ld] and [%ld]\n",
+		first, last);
+
+	for (i = first; i < size && i <= last; i++)
 	{
+		printf("Value checked array [%ld] = [%d]\n", i, array[i]);
 		if (array[i] == value)
 		{
-			printf("Value found between indexes [%d] and [%d]\n",
-				array[first], array[last]);
 			return (i);
 		}
-		printf("Value checked array [%d] = [%ld]\n", array[first], first);
 	}
 
 	return (-1);
