@@ -1,5 +1,14 @@
 #include "search_algos.h"
 
+/**
+ * jump_search - a function to search for a given value in a given array
+ * @arry: a pointer to the first element of the array to search in
+ * @size: the number of elements in array
+ * @value: the value to search for
+ *
+ * Return: return the first index where value is located, otherwise -1
+ */
+
 int jump_search(int *array, size_t size, int value)
 {
 
@@ -8,7 +17,6 @@ int jump_search(int *array, size_t size, int value)
 	if (!array)
 		return (-1);
 
-	//length = sizeof(array) / sizeof(array[0]);
 	first = array[0];
 	last = sqrt(size);
 
