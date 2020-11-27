@@ -1,3 +1,5 @@
+# C is Fun
+
 For this project, students are expected to look at this concept:
 - [The Framework](https://intranet.hbtn.io/concepts/75)
 
